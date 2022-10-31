@@ -8,3 +8,54 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+.page {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 56px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  text-decoration: none;
+  width: 82px;
+  height: 31px;
+}
+
+.header__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header__item:not(:last-of-type) {
+  margin: 0 82px 0 0;
+}
+
+.header__link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
