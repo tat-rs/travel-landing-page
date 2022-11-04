@@ -26,7 +26,7 @@ html {
 /* Header style */
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -81,6 +81,11 @@ html {
   background-repeat: no-repeat;
   color: #fff;
   padding: 263px 0 0;
+}
+
+.intro__wrapper {
+  box-sizing: border-box;
+  padding: 0 0 370px 0;
 }
 
 .intro__title {
@@ -165,4 +170,96 @@ html {
 
 .intro__btn:hover {
   cursor: pointer;
+}
+
+/*Benefits style */
+
+.benefits {
+  position: relative;
+  max-width: 1262px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 0 111px 0;
+  background-color: #fff;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+}
+
+.benefits__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  margin: 0;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 93px 100px 88px;
+}
+
+.benefits__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 32px 0 0 0;
+  display: flex;
+}
+
+.benefits__card {
+  max-width: 317px;
+  margin: 0 55px 0 0;
+}
+
+.benefits__card:last-of-type {
+  margin: 0;
+}
+
+.benefits__icon {
+  display: block;
+  width: 66px;
+  height: 66px;
+  margin: 0 0 37px 0;
+}
+
+.benefits__subtitle {
+  max-width: 100%;
+  margin: 0 0 26px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.benefits__text {
+  margin: 0 0 39px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.benefits__btn {
+  max-width: 161px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.button__text {
+  margin: 0 26px 0 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #006DFE;
+  text-transform: uppercase;
+}
+
+.button__icon {
+  display: block;
+  width: 33px;
+  height: 8px;
 }
