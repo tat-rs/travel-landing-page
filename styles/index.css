@@ -566,6 +566,7 @@ html {
   position: relative;
   max-width: 1440px;
   width: 100%;
+  max-height: 620px;
   padding: 42% 0 0 0;
   margin: 0 auto;
 }
@@ -578,4 +579,58 @@ html {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Footer styles */
+
+.footer {
+  width: 100%;
+  min-height: 370px;
+  box-sizing: border-box;
+  padding: 119px 20px;
+  background-color: #0E1D28;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: block;
+  width: 170px;
+  height: 64px;
+}
+
+.footer__nav {
+  display: flex;
+  color: #fff;
+}
+
+.footer__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__list:not(:last-of-type) {
+  margin: 0 140px 0 0;
+}
+
+.footer__item:not(:last-of-type) {
+  margin: 0 0 3px 0;
+}
+
+.footer__subtitle {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
 }
