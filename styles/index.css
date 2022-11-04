@@ -247,25 +247,30 @@ html {
   max-width: 161px;
 }
 
-.button {
-  display: flex;
-  align-items: center;
-  border: none;
-  background-color: inherit;
-  margin: 0;
-  padding: 0;
+.benefits__link-text {
+  color: #006DFE;
 }
 
-.button__text {
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.link:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.link__text {
   margin: 0 26px 0 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #006DFE;
   text-transform: uppercase;
 }
 
-.button__icon {
+.link__icon {
   display: block;
   width: 33px;
   height: 8px;
@@ -362,6 +367,10 @@ html {
   height: 283px;
 }
 
+.places__link-text {
+  color: #006DFE;
+}
+
 .places__card::after {
   position: absolute;
   content: "";
@@ -382,4 +391,71 @@ html {
   line-height: 60px;
   color: #fff;
   z-index: 10;
+}
+
+/* Tour style */
+
+.tour {
+  box-sizing: border-box;
+  padding: 0 0 139px 0;
+}
+
+.tour__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tour__item {
+  display: flex;
+  gap: 65px;
+}
+
+.tour__item:not(:last-of-type) {
+  margin: 0 0 77px 0;
+}
+
+.tour__item_reverse {
+  flex-direction: row-reverse;
+}
+
+.tour__image-container {
+  width: 597px;
+  height: 354px;
+}
+
+.tour__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour__info {
+  max-width: 610px;
+  box-sizing: border-box;
+  padding: 26px 42px 0 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  color: #102746;
+}
+
+.tour__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #102746;
+}
+
+.tour__link {
+  color: #006DFE;
 }
