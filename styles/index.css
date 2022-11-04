@@ -141,6 +141,10 @@ html {
   color: #fff;
 }
 
+.intro__input:focus {
+  outline: 0;
+}
+
 .intro__btn {
   width: 171px;
   height: 58px;
@@ -152,6 +156,11 @@ html {
   line-height: 29px;
   text-transform: uppercase;
   text-align: center;
+  transition: all .2s;
+}
+
+.intro__btn:hover {
+  background-color: #2472d8;
 }
 
 .intro__btn:hover {
