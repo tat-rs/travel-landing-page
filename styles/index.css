@@ -23,6 +23,11 @@ html {
   margin: 0 auto;
 }
 
+.wrapper-full {
+  max-width: 1262px;
+  margin: 0 auto;
+}
+
 /* Header style */
 
 .header {
@@ -176,9 +181,8 @@ html {
 
 .benefits {
   position: relative;
-  max-width: 1262px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 131px;
   box-sizing: border-box;
   padding: 0 0 111px 0;
   background-color: #fff;
@@ -241,6 +245,9 @@ html {
 
 .benefits__btn {
   max-width: 161px;
+}
+
+.button {
   display: flex;
   align-items: center;
   border: none;
@@ -262,4 +269,117 @@ html {
   display: block;
   width: 33px;
   height: 8px;
+}
+
+/* Places styles */
+
+.places {
+  box-sizing: border-box;
+  padding: 0 0 131px 0;
+}
+
+.places__caption {
+  width: 100%;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 36px;
+}
+
+.subtitle {
+  position: relative;
+  margin: 0;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+}
+
+.subtitle::after {
+  position: absolute;
+  content: "";
+  bottom: -12px;
+  left: 0;
+  width: 253px;
+  height: 3px;
+  background-color: #006DFE;
+}
+
+.places__title {
+  margin: 0 10px 0 0;
+}
+
+.places__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+.places__item {
+  overflow: hidden;
+}
+
+.places__item_size_bg {
+  grid-column: span 3;
+}
+
+.places__item_size_sm {
+  grid-column: span 2;
+}
+
+.places__link {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.places__link:hover .places__image {
+  transform: scale(1.03);
+}
+
+.places__card {
+  position: relative;
+  margin: 0;
+}
+
+.places__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  transition: all .2s;
+}
+
+.places__image_size_bg {
+  height: 354px;
+}
+
+.places__image_size_sm {
+  height: 283px;
+}
+
+.places__card::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(21, 24, 36, 0.4);
+}
+
+.places__name {
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  color: #fff;
+  z-index: 10;
 }
