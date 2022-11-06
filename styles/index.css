@@ -11,6 +11,7 @@ html {
 }
 
 .page {
+  position: relative;
   min-width: 320px;
   font-family: "Lato", Arial, Helvetica, sans-serif;
   font-weight: normal;
@@ -110,7 +111,6 @@ html {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-width: 100%;
 }
 
 .header__logo {
@@ -126,7 +126,7 @@ html {
   object-fit: cover;
 }
 
-.header__list {
+.nav__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -137,11 +137,76 @@ html {
   margin: 0 82px 0 0;
 }
 
-.header__link {
+.nav__link {
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
   color: #fff;
+}
+
+.btn-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 24px;
+  z-index: 100;
+}
+
+.btn-burger__line {
+  display: block;
+  font-size: 0;
+  width: 24px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.btn-burger__line_hidden {
+  display: none;
+}
+
+.btn-burger__line_left {
+  transform: translate(5px, 1px) rotate(45deg);
+  transform-origin: left top;
+  width: 24px;
+}
+
+.btn-burger__line_right {
+  transform: translate(-2px, -21px) rotate(-45deg);
+  transform-origin: right bottom;
+  width: 24px;
+}
+
+.nav-full {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  justify-content: flex-end;
+  background-color: rgba(21, 24, 36, 0.4);
+}
+
+.nav-full_opened {
+  display: flex;
+}
+
+.nav-full__wrapper {
+  width: 260px;
+  min-height: 100%;
+  background-color: #102746;
+  padding: 110px 50px 20px;
+}
+
+.nav-full__list {
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-full__item {
+  margin: 0;
 }
 
 /* Intro style */
@@ -523,7 +588,7 @@ html {
   display: flex;
   justify-content: space-between;
   gap: 14px;
-  padding: 15px 5px;
+  padding: 25px 5px;
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
 }
@@ -645,7 +710,7 @@ html {
 }
 
 @media (max-width:900px) {
-  .header__link {
+  .nav__link {
     font-size: 15px;
   }
 
@@ -832,14 +897,12 @@ html {
     padding-right: 15px;
   }
 
-  .header__list {
-    flex-direction: column;
-    max-height: 45px;
-    overflow-y: scroll;
+  .header__nav {
+    display: none;
   }
 
-  .header__item:not(:last-of-type) {
-    margin: 0 0 5px 0;
+  .btn-burger {
+    display: flex;
   }
 
   .intro__wrapper {
@@ -895,6 +958,10 @@ html {
 
   .top {
     padding-bottom: 80px;
+  }
+
+  .top__info {
+    padding: 15px 5px;
   }
 
   .tour__image-container {
