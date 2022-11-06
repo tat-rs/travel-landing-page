@@ -14,6 +14,7 @@ function open() {
   
   nav.addEventListener("click", (evt) => closeOverlay(evt));
   window.addEventListener("keydown", (evt) => closeByEsc(evt));
+  window.addEventListener("resize", () => updateWidthWindow());
 }
 
 function close() {
@@ -45,6 +46,12 @@ function closeOverlay(evt) {
 
 function closeByEsc(evt) {
   if(evt.key === "Escape") {
+    close();
+  }
+}
+
+function updateWidthWindow() {
+  if(window.innerWidth > 630 && btnBurger.classList.contains("btn-burger_opened")) {
     close();
   }
 }
